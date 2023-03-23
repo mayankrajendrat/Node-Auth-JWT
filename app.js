@@ -43,6 +43,9 @@ app.get('/', function (req, res) {
 let authentication = require('./routes/auth');
 let book = require('./routes/book');
 
+
+
+
 // Using routes
 app.use('/api', authentication);
 app.use('/api', passport.authenticate('jwt', { session: false }), book);
