@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "7b462b65-34df-4a8c-a75a-7b0032fcb10a",
+		"name": "Node-JWT-Local [/Users/mayanktiwari/mayankT/10XAcademy/Node Batch/MAR-2023/session-1-12-Mar-2023]",
+		"description": "/Users/mayanktiwari/mayankT/10XAcademy/Node Batch/MAR-2023/session-1-12-Mar-2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "mayank@10xacademy.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "10xacademy",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGN IN USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "mayank@10xacademy.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "10xacademy",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE BOOK",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE5YmJlZjZlZjBjYzQ4ZDFiMGEyMmYiLCJ1c2VybmFtZSI6Im1heWFua0AxMHhhY2FkZW15LmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJExzTmRQSFU2djlFMjJOc25TWjRIMS5iVnhrWjNyNS9oVnRyUmV5VWJsY21yYnByeEVpZmIyIiwiX192IjowLCJpYXQiOjE2Nzk0MDgzNDN9.IBhjrN0CtreDd-j3vvGT-4_VjBnkmxbAyTANxNh1EoM",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"isbn\": 556677,\n            \"title\": \"Node JS Basics by Mayank\",\n            \"author\": \"MayankT\",\n            \"publisher\": \"NONE\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/book",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOKS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBmMjNkYTM4YmU2NTM1MWMyYTZhZjkiLCJ1c2VybmFtZSI6Im1heWFua0AxMHhhY2FkZW15LmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJEVHYVRiUXRrQU1URjRSYkxiMTVlSXVaMGcwS0ZSeVZyVVNpNm5NSmc1NUlZOGIwVG4uV01TIiwiX192IjowLCJpYXQiOjE2Nzg3MTQ3NzZ9.o4xwRbmSikicj6Xjv3mQb6PyH69p_h97F-mB9qsYyYA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"isbn\": 112233,\n            \"title\": \"HTML CSS JS\",\n            \"author\": \"Tim Berner Lee\",\n            \"publisher\": \"Arihant\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/book",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
